@@ -1,0 +1,19 @@
+load("@bazel_skylib//rules:build_test.bzl", "build_test")
+load("@build_bazel_rules_swift//swift:swift.bzl", "swift_binary")
+
+swift_binary(
+    name = "PrintObjcVersion",
+    srcs = ["PrintObjcVersion.swift"],
+    module_name = "PrintObjcVersion",
+    visibility = ["//visibility:public"],
+    # Uncomment the following line to successfully build on Linux.
+    # target_compatible_with = ["@platforms//os:macos"],
+    deps = [
+        "//SimpleObjc",
+    ],
+)
+
+build_test(
+    name = "build_test",
+    targets = [":PrintObjcVersion"],
+)

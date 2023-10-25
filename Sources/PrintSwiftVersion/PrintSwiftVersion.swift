@@ -1,7 +1,7 @@
-import SimpleObjc
+import SimpleSwift
 
 @main
-enum PrintVersion {
+enum PrintSwiftVersion {
     static func main() {
         let verInfo = VersionInfo()
         print(verInfo.version)
