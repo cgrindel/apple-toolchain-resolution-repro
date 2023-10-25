@@ -1,13 +1,10 @@
 load("@build_bazel_rules_swift//swift:swift.bzl", "swift_library")
 
 swift_library(
-    name = "FooSwift",
-    srcs = ["FooSwiftVersionInfo.swift"],
+    name = "SimpleSwift",
+    srcs = ["VersionInfo.swift"],
     generates_header = True,
-    module_name = "FooSwift",
+    module_name = "SimpleSwift",
     tags = ["manual"],
     visibility = ["//visibility:public"],
-    deps = [
-        "//SimpleObjc",
-    ],
 )
