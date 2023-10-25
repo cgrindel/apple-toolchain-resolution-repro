@@ -1,0 +1,14 @@
+load("@rules_cc//cc:defs.bzl", "objc_library")
+
+objc_library(
+    name = "SimpleObjc",
+    srcs = ["SimpleObjc.m"],
+    hdrs = [
+        "SimpleObjc.h",
+    ],
+    enable_modules = True,
+    module_name = "SimpleObjc",
+    tags = ["manual"],
+    target_compatible_with = ["@platforms//os:macos"],
+    visibility = ["//:__subpackages__"],
+)
