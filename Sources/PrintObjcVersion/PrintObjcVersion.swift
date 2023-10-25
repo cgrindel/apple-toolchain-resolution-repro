@@ -1,7 +1,7 @@
 import SimpleObjc
 
 @main
-enum PrintVersion {
+enum PrintObjcVersion {
     static func main() {
         let verInfo = VersionInfo()
         print(verInfo.version)
